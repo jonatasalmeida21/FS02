@@ -1,19 +1,24 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@600 & family= Noto+Serif+JP & display=swap');
+
 body{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    overflow: hidden;
+    background-color: black;
+    flex-direction: column;
     
+}
+
 .logo{
     width: 100px;
     height: 100px;
     border-radius: 18px;
     background-color: #ab226d;
     position: relative;
-    animation: mover  2s 0s reverse ease both running;
-
 }
+
 
 .logo .maiorq{
     width: 30px;
@@ -47,3 +52,90 @@ body{
     bottom: 30px;
     right: 20px;
 }
+
+
+
+.at-container .at-item{
+    display: flex;
+    align-items: center;
+}
+
+.at-container h1{
+    font-family: 'Inter', sans-serif;  
+    font-size: 100px;
+    margin: 0 5px;
+    color: #ab226d;
+    
+}
+
+
+.at-container img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+}
+
+
+div.at-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count:3;
+}
+.at-item {
+    color: #ab226d; font-weight:bold; font-size:3em;
+    
+    animation-name: focus-in-contract;
+    animation-duration: 5.2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+    
+
+
+}
+@keyframes focus-in-contract {
+        
+    0% {
+        letter-spacing:1em;
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        filter:blur(0);
+        opacity:1;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    filter: brightness(none);
+    }
+    50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    filter: brightness(120%);
+    }
+    100% {
+    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    filter: brightness(none);
+    }
+    }
+   
